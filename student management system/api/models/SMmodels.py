@@ -1,4 +1,4 @@
-from sms import db, app, bcrypt
+from api import db, app, bcrypt
 from sqlalchemy import Time, Date, DateTime, Enum
 import enum
 

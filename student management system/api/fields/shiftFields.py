@@ -1,5 +1,5 @@
 from flask_restx import fields
-from sms import shifts_ns
+from api import shifts_ns
 
 shifts_data = shifts_ns.model(
     "Shifts Data",

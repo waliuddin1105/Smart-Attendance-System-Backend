@@ -1,4 +1,4 @@
-from sms import shift_management_ns
+from api import shift_management_ns
 from flask_restx import fields
 
 shift_management_data = shift_management_ns.model(

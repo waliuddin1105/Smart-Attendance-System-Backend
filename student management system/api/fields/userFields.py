@@ -1,6 +1,6 @@
 from marshmallow import Schema, validates, ValidationError, fields
 from marshmallow.validate import Length
-from sms import user_ns
+from api import user_ns
 import re   #regex for  password validations
 from flask_restx import fields as f
 

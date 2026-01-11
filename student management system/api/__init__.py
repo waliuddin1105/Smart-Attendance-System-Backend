@@ -51,9 +51,9 @@ celery = make_celery(app)
 
 auth_ns = Namespace('Authorization', description = 'user authorization')
 api.add_namespace(auth_ns, '/auth')
-import sms.routes.employeeRoutes
-import sms.routes.shiftsRoutes
-import sms.routes.shiftManagementRoutes
-import sms.routes.attendanceRoutes
-import sms.routes.userRoutes
-import sms.models.SMmodels
+import api.routes.employeeRoutes
+import api.routes.shiftsRoutes
+import api.routes.shiftManagementRoutes
+import api.routes.attendanceRoutes
+import api.routes.userRoutes
+import api.models.SMmodels

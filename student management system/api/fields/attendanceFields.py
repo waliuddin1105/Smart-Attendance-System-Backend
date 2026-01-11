@@ -1,4 +1,4 @@
-from sms import attendance_log_ns
+from api import attendance_log_ns
 from flask_restx import fields
 
 attendance_log_data = attendance_log_ns.model(

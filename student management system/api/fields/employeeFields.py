@@ -1,4 +1,4 @@
-from sms import employee_ns
+from api import employee_ns
 from flask_restx import fields
 
 employee_data = employee_ns.model(

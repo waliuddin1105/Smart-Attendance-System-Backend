@@ -1,4 +1,4 @@
-from sms import auth_ns
+from api import auth_ns
 from flask_restx import fields as f
 from marshmallow import fields, ValidationError, Schema
 from marshmallow.validate import Length
