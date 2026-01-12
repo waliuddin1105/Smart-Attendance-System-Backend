@@ -1,8 +1,8 @@
 from flask import request, jsonify
 from flask_restx import Resource
-from sms import db, shift_management_ns
-from sms.models.SMmodels import ShiftAssignment, Employee, Shifts
-from sms.schemas.shiftManagementFields import shift_management_data
+from api import db, shift_management_ns
+from api.models.SMmodels import ShiftAssignment, Employee, Shifts
+from api.fields.shiftManagementFields import shift_management_data
 from datetime import datetime
 from flask_jwt_extended import jwt_required, get_jwt_identity
 

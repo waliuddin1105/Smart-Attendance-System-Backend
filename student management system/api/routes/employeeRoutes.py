@@ -1,8 +1,8 @@
-from sms import employee_ns, db
+from api import employee_ns, db
 from flask import request
 from flask_restx import Resource
-from sms.models.SMmodels import Employee
-from sms.schemas.employeeFields import employee_data
+from api.models.SMmodels import Employee
+from api.fields.employeeFields import employee_data
 from flask_jwt_extended import jwt_required, get_jwt_identity
 
 @employee_ns.route('/add')

@@ -1,8 +1,8 @@
 from flask import request
 from flask_restx import Resource
-from sms.models.SMmodels import db, Employee, AttendanceLog, AttendanceLogType#for enum
-from sms.schemas.attendanceFields import attendance_log_data
-from sms import attendance_log_ns
+from api.models.SMmodels import db, Employee, AttendanceLog, AttendanceLogType#for enum
+from api.fields.attendanceFields import attendance_log_data
+from api import attendance_log_ns
 from datetime import datetime
 from flask_jwt_extended import jwt_required, get_jwt_identity
 

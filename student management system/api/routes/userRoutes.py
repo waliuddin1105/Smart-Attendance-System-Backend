@@ -1,9 +1,9 @@
 from flask import request
 from flask_restx import Resource
-from sms import user_ns, db, auth_ns
-from sms.schemas.userFields import UserSchema, user_data
-from sms.schemas.loginFields import login_data, UserLoginSchema
-from sms.models.SMmodels import User
+from api import user_ns, db, auth_ns
+from api.fields.userFields import UserSchema, user_data
+from api.fields.loginFields import login_data, UserLoginSchema
+from api.models.SMmodels import User
 from marshmallow import ValidationError
 from flask_jwt_extended import create_access_token
 

@@ -1,8 +1,8 @@
 from flask import request
-from sms import db, shifts_ns
+from api import db, shifts_ns
 from flask_restx import Resource
-from sms.schemas.shiftFields import shifts_data
-from sms.models.SMmodels import Shifts
+from api.fields.shiftFields import shifts_data
+from api.models.SMmodels import Shifts
 from datetime import datetime
 from flask_jwt_extended import jwt_required, get_jwt_identity
 
