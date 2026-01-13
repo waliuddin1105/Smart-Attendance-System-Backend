@@ -1,0 +1,16 @@
+venv/
+.env/
+__pycache__/
+*.pyc
+*.log
+celerybeat-schedule
+*.db
+*.sqlite
+*.sqlite3
+config.cfg
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.bak
+*.swp
