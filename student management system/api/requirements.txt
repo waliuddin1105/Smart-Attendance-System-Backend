@@ -1,0 +1,12 @@
+Flask
+Flask-SQLAlchemy
+Flask-RESTX
+Flask-Bcrypt
+Flask-JWT-Extended
+
+celery
+redis
+
+psycopg2-binary
+
+marshmallow

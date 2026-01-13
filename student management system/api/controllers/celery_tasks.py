@@ -1,4 +1,4 @@
-from sms import app, celery
+from api import app, celery
 from flask_mail import Message
 import ssl
 import smtplib
