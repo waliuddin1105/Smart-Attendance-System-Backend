@@ -5,6 +5,8 @@ import smtplib
 import redis
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from api import config_parser
+
 def is_redis():
     try:
         redis_url = app.config.get('CELERY_BROKER_URL', "redis://localhost:6379/0")
@@ -25,8 +27,10 @@ def is_redis():
     except(redis.ConnectionError, Exception) as e:
         return {"Error":f"{e}"}
     
-sender_email = "waliahmed1105@gmail.com"
-password = ""
+sender_email = config_parser.get('email', 'SENDER_EMAIL')
+password = config_parser.get('email', 'MAIL_PASSWORD')
+mail_server = config_parser.get('email', 'MAIL_SERVER')
+mail_port = config_parser.get('email', 'MAIL_PORT')
 
 def send_mail(recipient):
     body = '''Have a good day
@@ -42,7 +46,7 @@ def send_mail(recipient):
 
     try:
         context = ssl.create_default_context()
-        with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+        with smtplib.SMTP_SSL(mail_server, mail_port, context=context) as server:
             server.login(sender_email, password)
             print("Sending mail")
             server.sendmail(sender_email, recipient, message.as_string())
