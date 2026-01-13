@@ -4,6 +4,7 @@ from flask_restx import Namespace, Api
 from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager
 from celery_config import make_celery
+from configparser import ConfigParser
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:14Nov%402005@localhost:5432/studentManagement_db"
@@ -12,6 +13,9 @@ app.config['CELERY_BROKER_URL'] = 'redis://localhost:6379/0'
 app.config['CELERY_RESULT_BACKEND'] = 'redis://localhost:6379/0'
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
+
+config_parser = ConfigParser(interpolation=None)
+config_parser.read('config.cfg')
 
 authorizations = {
     'bearer authorizations':
